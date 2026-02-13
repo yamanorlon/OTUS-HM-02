@@ -8,11 +8,7 @@ pluginManagement {
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
+rootProject.name = "lessons"
 
-
-include("lessons")
-include("lessons")
-include("lessons:lesson-01")
-include("lessons:lessons-02")
-include("project")
-include("project:project-tmp")
+include("lesson-01")
+include("lesson-02")

@@ -1,20 +1,21 @@
 plugins {
-    alias(libs.plugins.kotlin.jvm)
+    kotlin("jvm")
 }
+
+group = "ru.otus.homework"
+version = "unspecified"
 
 repositories {
     mavenCentral()
 }
 
-kotlin {
-    jvmToolchain(17)
-}
-
 dependencies {
-    implementation(libs.kotlin.stdlib)
     testImplementation(kotlin("test"))
 }
 
 tasks.test {
     useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
 }
